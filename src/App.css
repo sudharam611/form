@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+.form-container {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.heading {
+  text-align: center;
+  font-size: 1rem;
+}
+.description {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+.form-input-section {
+  display: flex;
+  gap: 10px;
+  /* align-items: center; */
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .form-input-section {
+    flex-direction: column;
+  }
+  .container {
+    width: 90%;
+  }
+  .checkbox-section {
+    margin-left: 5px !important;
+  }
+  .form-label {
+    width: 200px !important;
+  }
+  .form-item-horizontal {
+    /* display: flex; */
+    flex-direction: column !important;
+    align-items: initial !important;
+  }
+  .form-item-horizontal .form-label {
+    text-align: initial !important;
+    margin-bottom: 1rem;
+  }
+}
+.form-label {
+  /* margin-top: 5px; */
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  /* margin-left: 0; */
+}
+.label-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.label-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+.input-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  /* margin-bottom: 10px; */
+}
+.form-input {
+  /* flex: 1; */
+  /* padding: 8px 6px; */
+  /* border-radius: 8px;
+  border: 1px solid #ccc; */
+
+  outline: none;
+  /* margin-bottom: 20px; */
+}
+.small {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+.default {
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+.large {
+  padding: 12px 16px;
+  font-size: 1.2rem;
+}
+.outlined {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.borderless {
+  border: none;
+  background-color: #fff;
+}
+.underlined {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+}
+.filled {
+  border: 1px solid transparent;
+  background-color: #fff;
+}
+.filled:focus {
+  border: 1px solid #007bff;
+  background-color: #fff;
+  border-radius: 8px;
+  outline: none;
+}
+.form-input-error {
+  border: 1px solid red;
+}
+.input-error {
+  font-size: 0.7rem;
+  color: red;
+  min-height: 1rem;
+}
+.checkbox-section {
+  margin-left: 110px;
+  /* margin-top: 15px; */
+  margin-bottom: 15px;
+}
+.checkbox {
+  margin-right: 4px;
+}
+.checkbox-label {
+  font-size: 0.9rem;
+}
+.button-item {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.primary {
+  color: white;
+  background-color: #007bff;
+}
+.secondary {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+.tertiary {
+  border: none;
+  color: #007bff;
+  background-color: transparent;
+}
+.button-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.radio {
+  display: flex;
+  gap: 15px;
+}
+.radio-input {
+  margin-left: 10px;
+}
+.disable-form {
+  margin-bottom: 25px;
+  margin-right: 10px;
+}
+input:disabled {
+  border: 1px solid #ddd;
+}
+input:disabled::placeholder {
+  color: #ccc;
+}
+
+.form-item {
+  margin-bottom: 1.5rem;
+}
+
+.form-item-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-item-horizontal .form-label {
+  width: 150px;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.form-item-horizontal .input-field-wrapper {
+  flex: 1;
+}
+
+.form-item-vertical .form-label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-layout-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-item-inline {
+  display: flex;
+  /* align-items: center; */
+}
+
+.form-item-inline .form-label {
+  margin-right: 0.5rem;
+}
+.required-asterisk {
+  color: red;
+  margin-right: 5px;
+}
+.optional-text {
+  font-size: 0.7rem;
+  margin-right: 5px;
+}
+.required-box {
+  color: #ff4d4f;
+  margin-right: 5px;
+  font-size: 0.7rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+}
+.optional-box {
+  color: #faad14;
+  border: 1px solid #ffe58f;
+  margin-right: 5px;
+  font-size: 0.7rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fffbe6;
+}
+.input-warning {
+  color: #faad14;
+  font-size: 0.7rem;
+  min-height: 1rem;
+}
+.help-text {
+  font-size: 0.75rem;
+  color: #faad14;
+  min-height: 1rem;
+}
+.input-field-wrapper {
+  position: relative;
+}
+.feedback-icon {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+}
+.input-error {
+  border-color: red;
+}
+
+/* .input-success {
+  border-color: green;
+} */
+
+.input-warning {
+  border-color: orange;
+}
+
+.input-validating {
+  border-color: blue;
+}
+.form-input-success {
+  border: 1px solid #ccc;
+}
+.form-input-error {
+  border: 1px solid red;
+}
+.form-input-warning {
+  border: 1px solid orange;
+}
+.form-input-validating {
+  border: 1px solid gray;
+}
+.input-wrapper-with-icon {
+  position: relative;
+}
+.prefix-icon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+}
+.input-with-icon {
+  padding-left: 30px;
+}
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.render-children-section {
+  width: 100%;
+}
+.render-children-section > div {
+  width: 100% !important;
+}
